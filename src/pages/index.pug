@@ -1,0 +1,113 @@
+extends ../layout/root
+block title 
+	title Doc title
+block meta_k 
+	meta(name="keywords" content="meta_k .........text")
+block meta_d 
+	meta(name="description" content="meta_d ......text")
+
+block main
+	.container
+		+b.cyrrency-select
+			+e.text Select currency to exhange:
+			+e.SELECT.select
+				+e.OPTION(value="BTCUSD").option USD
+				+e.OPTION(value="BTCEUR").option EUR
+				+e.OPTION(value="BTCRUB").option RUB
+				+e.OPTION(value="BTCGBP").option GBP
+
+		+b.currency-list
+			+e.item_ethereum
+				+e.H4.title Ethereum
+				+e.logo_ethereum
+				+e.row_price
+					+e.name Price:
+					+e.value $22 526.92
+				+e.row_toggle
+					+e.name Percent change
+					+e.value
+						+e.BUTTON.btn-toggle
+				+e.row_profit
+					+e.name Hour change
+					+e.value
+						+e.SPAN.price_hour
+						+e.SPAN.percent_hour
+				+e.row_profit
+					+e.name Day change
+					+e.value
+						+e.SPAN.price_day
+						+e.SPAN.percent_day
+				+e.row_profit
+					+e.name Week change
+					+e.value
+						+e.SPAN.price_week
+						+e.SPAN.percent_week
+				+e.row_profit
+					+e.name Month change
+					+e.value
+						+e.SPAN.price_month
+						+e.SPAN.percent_month
+
+
+			+e.item_litecoin
+				+e.H4.title Litecoin
+				+e.logo_litecoin
+				+e.row_price
+					+e.name Price:
+					+e.value $22 526.92
+				+e.row_toggle
+					+e.name Percent change
+					+e.value
+						+e.BUTTON.btn-toggle
+				+e.row_profit
+					+e.name Hour change
+					+e.value
+						+e.SPAN.price_hour
+						+e.SPAN.percent_hour
+				+e.row_profit
+					+e.name Day change
+					+e.value
+						+e.SPAN.price_day
+						+e.SPAN.percent_day
+				+e.row_profit
+					+e.name Week change
+					+e.value
+						+e.SPAN.price_week
+						+e.SPAN.percent_week
+				+e.row_profit
+					+e.name Month change
+					+e.value
+						+e.SPAN.price_month
+						+e.SPAN.percent_month
+
+
+			+e.item_bitcoin
+				+e.H4.title Bitcoin
+				+e.logo_bitcoin
+				+e.row_price
+					+e.name Price:
+					+e.value $22 526.92
+				+e.row_toggle
+					+e.name Percent change
+					+e.value
+						+e.BUTTON.btn-toggle.active
+				+e.row_profit
+					+e.name Hour change
+					+e.value
+						+e.SPAN.price_hour
+						+e.SPAN.percent_hour
+				+e.row_profit
+					+e.name Day change
+					+e.value
+						+e.SPAN.price_day
+						+e.SPAN.percent_day
+				+e.row_profit
+					+e.name Week change
+					+e.value
+						+e.SPAN.price_week
+						+e.SPAN.percent_week
+				+e.row_profit
+					+e.name Month change
+					+e.value
+						+e.SPAN.price_month
+						+e.SPAN.percent_month

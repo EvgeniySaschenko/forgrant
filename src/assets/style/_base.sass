@@ -1,0 +1,49 @@
+/* Roboto */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700')
+
+*
+	box-sizing: border-box
+
+img
+	max-width: 100%
+	height: auto
+
+body
+	color: #000000
+	font-family: 'Roboto', sans-serif
+	font-size: 14px
+	overflow-x: hidden
+	min-width: 320px
+
+a
+	text-decoration: none
+	&:hover
+		transition-duration: .3s
+
+button,
+input[type="checkbox"]
+	border: none
+	outline: none
+
+button,
+input[type="submit"]
+	cursor: pointer
+
+.wrapper
+	margin: 0 auto
+	position: relative
+	background-image: url(../img/bg.png)
+	background-color: $main-color
+	background-repeat:  no-repeat
+	background-position-x: center
+	padding-top: 70px
+	min-height: 100vh
+
+
+.container
+	max-width: 1006px
+	width: 100%
+	margin: 0 auto
+	padding: 0 10px
+	@media #{$phone-mini}
+		padding: 0 6px

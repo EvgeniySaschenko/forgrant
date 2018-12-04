@@ -1,0 +1,82 @@
+.cyrrency-select{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 20px;
+	margin-bottom: 50px;
+	border: 1px solid #2b3b45;
+	border-radius: 8px;
+	background-color: rgba(255, 255, 255, 0.02);
+	@media #{$tablet}{
+		justify-content: center;
+	}
+	&__text{
+		margin: 0 100px 0 130px;
+		font-size: 32px;
+		font-weight: 500;
+		color: #ffffff;
+		@media #{$tablet}{
+			width: 100%;
+			text-align: center;
+			margin: 0 0 20px 0;
+		}
+	}
+	select{
+		display: none;
+	}
+	.jq-selectbox{
+		&__select{
+			font-size: 16px;
+			font-weight: 300;
+			border: 1px solid #92e8fe;
+			width: 297px;
+			padding: 20px 14px;
+			color: #b9babb;
+			border-radius: 8px;
+			background-color: $main-color;
+			cursor: pointer;
+		}
+		&__trigger-arrow{
+			height: 5px;
+			width: 9px;
+			position: relative;
+			left: 250px;
+			top: -7px;
+			background-image: url(../img/select-arrow.png);
+		}
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+		only screen and (min-resolution: 144dpi) {
+			&__trigger-arrow{
+				background-image: url(../img/select-arrow@2x.png);
+				background-size: 100%;
+			}
+		}
+		&__dropdown{
+			background-color: $main-color;
+			border: 1px solid #92e8fe;
+			width: 100%;
+			color: #b9babb;
+			font-size: 16px;
+			font-weight: 300;
+			border-radius: 8px;
+			padding: 10px;
+			margin-top: 15px;
+		}
+	}
+	&__option{
+		cursor: pointer;
+		padding: 10px 0;
+	}
+
+	@media #{$tablet}{
+		.cyrrency-select{
+			justify-content: center;
+			&__text{
+				width: 100%;
+				text-align: center;
+				margin: 0 0 20px 0;
+			}
+		}
+	}
+}

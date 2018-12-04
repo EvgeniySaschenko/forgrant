@@ -1,0 +1,176 @@
+.currency-list{
+	$green: #70c446;
+	$red: #c80e24;
+
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	@media #{$tablet}{
+		justify-content: center;
+	}
+	&__item{
+		width: 308px;
+		border-radius: 10px;
+		position: relative;
+		padding: 24px;
+		color: #ffffff;
+		font-weight: 700;
+		@media #{$tablet}{
+			margin: 10px;
+		}
+		&_ethereum{
+			background-color: #2d4934;
+		}
+		&_litecoin{
+			background-color: #353535;
+		}
+		&_bitcoin{
+			background-color: #512d11;
+		}
+		&::before{
+			content: "";
+			height: 156px;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-image: url(../img/currency-bg-1.png)
+		}
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+		only screen and (min-resolution: 144dpi) {
+			&::before{
+				background-image: url(../img/currency-bg-1@2x.png);
+			}
+		}
+	}
+	&__title{
+		font-size: 22px;
+		text-align: center;
+		position: relative;
+		z-index: 3;
+	}
+	&__logo{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-position-x: center;
+		background-position-y: 0;
+		background-repeat: no-repeat;
+		&_ethereum{
+			background-image: url(../img/ethereum.png);
+		}
+		&_litecoin{
+			background-image: url(../img/litecoin.png);
+		}
+		&_bitcoin{
+			background-image: url(../img/bitcoin.png);
+		}
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+		only screen and (min-resolution: 144dpi) {
+			&_ethereum{
+				background-image: url(../img/ethereum@2x.png);
+				background-size: 100%;
+			}
+			&_litecoin{
+				background-image: url(../img/litecoin@2x.png);
+				background-size: 100%;
+			}
+			&_bitcoin{
+				background-image: url(../img/bitcoin@2x.png);
+				background-size: 100%;
+			}
+		}
+	}
+	&__btn-toggle{
+		height: 16px;
+		width: 40px;
+		background: linear-gradient(to bottom, #2e7497, #3baae2);
+		border-radius: 20px;
+		border: 0;
+		cursor: pointer;
+		position: relative;
+		&::before{
+			position: absolute;
+			left: -5px;
+			top: -5px;
+			content: "";
+			background-size: contain;
+			background-image: url(../img/currency-toggle.png);
+			height: 25px;
+			width: 25px;
+			display: inline-block;
+		}
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+		only screen and (min-resolution: 144dpi) {
+			&::before{
+				background-image: url(../img/currency-toggle@2x.png);
+			}
+		}
+		&.active{
+			background: linear-gradient(to bottom, #7f7f7a, #bbb8b4);
+			&::before{
+				left: auto;
+				right: -5px !important;
+			}
+		}
+	}
+	&__row{
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: space-between;
+		// price
+		&_price{
+			margin-top: 150px;
+			margin-bottom: 15px;
+			.currency-list{
+				&__name{
+					font-size: 20px;
+				}
+				&__value{
+					font-size: 21px;
+				}
+			}
+		}
+		// toggle
+		&_toggle{
+			margin-bottom: 11px;
+		}
+		// profit
+		&_profit{
+			margin-bottom: 7px;
+			.currency-list{
+				&__name{
+					opacity: .2;
+				}
+				&__value{
+					font-size: 16px;
+					color: $green;
+					&.minus{
+						color: $red;
+					}
+				}
+				&__price{
+					display: none;
+				}
+			}
+			&.active-price{
+				.currency-list{
+					&__percent{
+						display: none;
+					}
+					&__price{
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+	&__value{
+		text-align: right;
+	}
+}
