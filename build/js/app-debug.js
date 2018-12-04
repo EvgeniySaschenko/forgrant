@@ -22,6 +22,7 @@
 
 	// Получить данные с сервера
 	function getCurrency(currency) {
+
 		$.ajax({
 			type: "get",
 			url: "https://apiv2.bitcoinaverage.com/indices/global/ticker/" + currency,
@@ -29,6 +30,7 @@
 				var _data$changes = data.changes,
 				    price = _data$changes.price,
 				    percent = _data$changes.percent;
+
 
 				setProfit('.currency-list__price_hour', '.currency-list__percent_hour', price.hour, percent.hour);
 				setProfit('.currency-list__price_day', '.currency-list__percent_day', price.day, percent.day);
